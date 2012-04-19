@@ -1,0 +1,81 @@
+{
+  "bounds": [
+    -122.4371,
+    37.7641,
+    -122.3667,
+    37.7978
+  ],
+  "center": [
+    -122.4075,
+    37.7742,
+    12
+  ],
+  "format": "png",
+  "interactivity": {
+    "layer": "parcelsm",
+    "template_full": "{{{POLY}}}",
+    "template_teaser": "{{{POLY}}}",
+    "fields": [
+      "MAPBLKLOT",
+      "BLKLOT",
+      "BLOCK_NUM",
+      "LOT_NUM",
+      "FROM_ST",
+      "TO_ST",
+      "STREET",
+      "ST_TYPE"
+    ]
+  },
+  "minzoom": 5,
+  "maxzoom": 20,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss",
+    "highways"
+  ],
+  "Layer": [
+    {
+      "geometry": "linestring",
+      "id": "streets",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/matth/Documents/MapBox/data/san-francisco.osm2pgsql-shapefiles/san-francisco.osm-line.shp",
+        "id": "streets",
+        "project": "sfparcels",
+        "srs": null
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "name": "streets"
+    },
+    {
+      "geometry": "linestring",
+      "id": "labels",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/matth/Documents/MapBox/data/san-francisco.osm2pgsql-shapefiles/san-francisco.osm-line.shp"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "name": "labels"
+    },
+    {
+      "geometry": "polygon",
+      "id": "parcelsm",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/matth/Documents/MapBox/data/sf_parcels_hack/sf_parcels_hack.shp",
+        "id": "parcelsm",
+        "project": "sfparcels",
+        "srs": null
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "name": "parcelsm"
+    }
+  ],
+  "name": "SF Parcels",
+  "description": "",
+  "attribution": "",
+  "legend": "Templates\nCloseLegendTeaserFullLocation"
+}
